@@ -26,12 +26,12 @@ Animal::Animal(const string &newSpecies, Gender gender) : gender(gender) {
 
 Animal::Animal(const string &newSpecies, Gender gender, float newWeight) : gender(gender) {
     setSpecies( newSpecies );
-    setWeight( newWeight );
+    setWeightGrams(newWeight);
 }
 
 Animal::Animal(const string &newSpecies, float newWeight) {
     setSpecies( newSpecies);
-    setWeight( newWeight );
+    setWeightGrams(newWeight);
 }
 
 const string &Animal::getKingdom() {
@@ -56,10 +56,10 @@ float Animal::getWeight() const {
     return weight;
 }
 
-void Animal::setWeight(float newWeight) {
-    if( !validateWeight( newWeight ))
+void Animal::setWeightGrams(float newWeight) {
+    if( !validateWeight(weight ))
         throw invalid_argument( "The weight must be > 0" );
-    Animal::weight = newWeight;
+    Animal::weight = weight;
 }
 
 

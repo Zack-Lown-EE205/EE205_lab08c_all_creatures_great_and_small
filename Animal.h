@@ -39,7 +39,7 @@ public:
 
     float getWeight() const;
 
-    void setWeight(float weight);
+    void setWeightGrams(float weight);
 
     void printInfo();
 
